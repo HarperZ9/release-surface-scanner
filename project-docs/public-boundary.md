@@ -10,7 +10,5 @@ Public:
 
 Private:
 - credentials and `.env` files
-- private WARDEN operations
+- private operator data
 - private evidence and client data
-- private runbooks
-- non-synthetic release corpora

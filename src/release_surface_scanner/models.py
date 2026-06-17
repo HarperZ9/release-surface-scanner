@@ -54,7 +54,7 @@ class ReleaseReport:
     files: tuple[FileRecord, ...] = ()
     excluded_paths: tuple[str, ...] = ()
     findings: tuple[Finding, ...] = ()
-    schema: str = "warden-release-assurance.report.v1"
+    schema: str = "release-surface-scanner.report.v1"
 
     def to_dict(self) -> dict[str, Any]:
         return {

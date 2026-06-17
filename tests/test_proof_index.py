@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from warden_release_assurance import build_proof_index, scan_repo
+from release_surface_scanner import build_proof_index, scan_repo
 
 
 def test_build_proof_index_groups_release_evidence(tmp_path: Path) -> None:
@@ -19,7 +19,7 @@ def test_build_proof_index_groups_release_evidence(tmp_path: Path) -> None:
     report = scan_repo(repo)
     index = build_proof_index(report)
 
-    assert index["schema"] == "warden-release-assurance.proof-index.v1"
+    assert index["schema"] == "release-surface-scanner.proof-index.v1"
     assert index["status"] == "pass"
     assert any(item["kind"] == "required-file" for item in index["evidence"])
     assert any(item["kind"] == "test" for item in index["evidence"])

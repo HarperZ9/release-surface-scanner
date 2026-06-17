@@ -16,7 +16,7 @@ def build_proof_index(report: ReleaseReport) -> dict[str, object]:
         if record.kind in {"required-file", "test", "doc"}
     ]
     return {
-        "schema": "warden-release-assurance.proof-index.v1",
+        "schema": "release-surface-scanner.proof-index.v1",
         "status": report.status,
         "repo_hash": report.repo_hash,
         "evidence": evidence,

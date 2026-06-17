@@ -29,7 +29,7 @@ def test_cli_scan_writes_json_and_markdown(tmp_path: Path) -> None:
         [
             sys.executable,
             "-m",
-            "warden_release_assurance",
+            "release_surface_scanner",
             "scan",
             str(repo),
             "--json-out",
@@ -47,7 +47,7 @@ def test_cli_scan_writes_json_and_markdown(tmp_path: Path) -> None:
 
     assert result.returncode == 0, result.stderr
     assert json.loads(json_out.read_text(encoding="utf-8"))["status"] == "pass"
-    assert "WARDEN Release Assurance" in md_out.read_text(encoding="utf-8")
+    assert "Release Surface Scanner" in md_out.read_text(encoding="utf-8")
 
 
 def test_cli_proof_index_writes_json(tmp_path: Path) -> None:
@@ -58,7 +58,7 @@ def test_cli_proof_index_writes_json(tmp_path: Path) -> None:
         [
             sys.executable,
             "-m",
-            "warden_release_assurance",
+            "release_surface_scanner",
             "proof-index",
             str(repo),
             "--json-out",

@@ -1,4 +1,4 @@
-"""CLI for WARDEN Release Assurance."""
+"""CLI for Release Surface Scanner."""
 from __future__ import annotations
 
 import argparse
@@ -31,7 +31,7 @@ def _cmd_proof_index(args: argparse.Namespace) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="warden-release",
+        prog="release-scan",
         description="Scan a public release surface and emit reviewable proof artifacts.",
     )
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")

@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "warden-release-assurance"
+name = "release-surface-scanner"
 version = "0.1.0"
 description = "Public-safe release assurance scanner for required files, secret-shaped values, proof indexes, and handoff reports."
 readme = "README.md"
@@ -17,7 +17,7 @@ dependencies = []
 dev = ["build>=1.2", "pytest>=8.0"]
 
 [project.scripts]
-warden-release = "warden_release_assurance.cli:main"
+release-scan = "release_surface_scanner.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -15,7 +15,7 @@ def write_json(data: dict[str, Any], path: Path) -> None:
 
 def render_markdown(report: ReleaseReport) -> str:
     lines = [
-        "# WARDEN Release Assurance",
+        "# Release Surface Scanner",
         "",
         f"- Status: `{report.status}`",
         f"- Files included: {report.file_count}",

@@ -1,3 +1,3 @@
 # Sample Release Candidate
 
-Synthetic repository fixture for WARDEN Release Assurance.
+Synthetic repository fixture for Release Surface Scanner.

@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from warden_release_assurance import FindingLevel, scan_repo
+from release_surface_scanner import FindingLevel, scan_repo
 
 
 def _sample_repo(tmp_path: Path) -> Path:

@@ -1,4 +1,4 @@
-"""Public WARDEN Release Assurance package."""
+"""Public Release Surface Scanner package."""
 from __future__ import annotations
 
 from .models import FileRecord, Finding, FindingLevel, ReleaseReport

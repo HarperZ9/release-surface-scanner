@@ -3,7 +3,7 @@
 > Turn a repo into a reviewable release packet: required files, .env exclusion, secret-shape detection, and per-file hashes.
 
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![python](https://img.shields.io/badge/python-3.11%2B-blue.svg)
+![python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
 ![version](https://img.shields.io/badge/version-0.1.0-informational.svg)
 [![CI](https://github.com/HarperZ9/release-surface-scanner/actions/workflows/tests.yml/badge.svg)](https://github.com/HarperZ9/release-surface-scanner/actions/workflows/tests.yml)
 ![deps: none](https://img.shields.io/badge/deps-none-success.svg)
@@ -17,6 +17,10 @@ It checks required release files, skips private environment files, detects secre
 release-scan scan . --json-out out/release-report.json --md-out out/release-report.md --fail-on-fail
 release-scan proof-index . --json-out out/proof-index.json
 ```
+
+## Usage
+
+See [USAGE.md](USAGE.md) for installation, the full CLI/Python surface, worked examples, and expected output. A runnable end-to-end demo lives in [`examples/demo.py`](examples/demo.py).
 
 ## Boundary
 

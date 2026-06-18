@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "release-surface-scanner"
 version = "0.1.0"
-description = "Public-safe release assurance scanner for required files, secret-shaped values, proof indexes, and handoff reports."
+description = "Turn a repo into a reviewable release packet: required files, .env exclusion, secret-shape detection, and per-file hashes."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"

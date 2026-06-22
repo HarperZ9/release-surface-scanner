@@ -15,6 +15,18 @@ SECRET_PATTERNS = (
     re.compile(r"sk-[A-Za-z0-9_\-]{32,}"),
     re.compile(r"AKIA[0-9A-Z]{16}"),
     re.compile(r"(?i)(api|secret|token|password)_?key\s*=\s*['\"]?[^'\"\s]{16,}"),
+    # GitHub fine-grained PAT (check before the gh*_ shape; "github" != "gh[opsru]")
+    re.compile(r"github_pat_[A-Za-z0-9_]{22,}"),
+    # GitHub classic / oauth / server / refresh / user-to-server tokens
+    re.compile(r"gh[opsru]_[A-Za-z0-9]{36}"),
+    # JSON Web Token (header.payload.signature, both first segments base64 of `{"...`)
+    re.compile(r"eyJ[A-Za-z0-9_=-]+\.eyJ[A-Za-z0-9_=-]+\.[A-Za-z0-9_=-]+"),
+    # PEM private-key block header (RSA/EC/DSA/OPENSSH/PGP/generic)
+    re.compile(r"-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----"),
+    # Slack token (bot/user/app/refresh/legacy)
+    re.compile(r"xox[baprs]-[A-Za-z0-9-]{10,}"),
+    # Google API key
+    re.compile(r"AIza[0-9A-Za-z_\-]{35}"),
 )
 
 

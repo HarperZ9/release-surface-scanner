@@ -1,5 +1,41 @@
 # Release Surface Scanner
 
+![Release Surface Scanner hero](docs/brand/release-surface-scanner-hero.png)
+
+> Build a reviewable release packet from required files, secret checks, and hashes.
+
+Release Surface Scanner inspects a repository before public delivery. It checks
+required release files, skips private environment files, detects secret-shaped
+values without echoing them, hashes included files, and emits JSON or Markdown
+release reports.
+
+## Why it matters
+
+Public repos need a repeatable release surface check before they ask anyone to
+trust the README, package, or artifact. This tool gives maintainers a compact
+packet that can feed proof indexes and release review.
+
+## Try it
+
+```powershell
+python -m pip install -e .
+release-scan scan . --json-out out/release-report.json --md-out out/release-report.md --fail-on-fail
+python -m pytest
+```
+
+## What to test first
+
+- Run `release-scan scan .` on the current repo.
+- Generate a proof index with `release-scan proof-index .`.
+- Confirm `.env` files are skipped and not echoed in reports.
+
+## Current status
+
+Python CLI and library with synthetic fixtures and tests. It is release hygiene
+tooling, not a vulnerability scanner or certification system.
+
+## Existing technical notes
+
 > Turn a repo into a reviewable release packet: required files, .env exclusion, secret-shape detection, and per-file hashes.
 
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

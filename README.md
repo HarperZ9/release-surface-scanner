@@ -63,8 +63,8 @@ See [USAGE.md](USAGE.md) for installation, the full CLI/Python surface, worked e
 This package publishes generic release assurance mechanics only. It does not publish private operator data, private evidence, client data, credentials, or `.env` files.
 
 ---
-**Zain Dana Harper** — small tools with explicit edges.
-[Portfolio](https://harperz9.github.io) · [HarperZ9](https://github.com/HarperZ9)
+**Zain Dana Harper** -- small tools with explicit edges.
+[Portfolio](https://harperz9.github.io) | [HarperZ9](https://github.com/HarperZ9)
 <sub>Built with Claude Code; reviewed, tested, and owned by me.</sub>
 
 ## For developers

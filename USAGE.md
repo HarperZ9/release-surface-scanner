@@ -37,7 +37,7 @@ release-scan proof-index <repo> --json-out <path>
 | Command       | Required args                | Optional flags                          |
 | ------------- | ---------------------------- | --------------------------------------- |
 | `scan`        | `<repo>`, `--json-out PATH`  | `--md-out PATH`, `--fail-on-fail`       |
-| `proof-index` | `<repo>`, `--json-out PATH`  | —                                       |
+| `proof-index` | `<repo>`, `--json-out PATH`  | none                                    |
 
 Notes on behavior (from the source):
 
